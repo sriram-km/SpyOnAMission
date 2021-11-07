@@ -69,5 +69,5 @@ $('div#centerDiv').css("display", "block").animate({
 
 $( "#brand img" ).click(function() {
   turnOff();
-  window.location.replace("/TextToSpeech/");
+  window.location.replace("/intro/");
 });
