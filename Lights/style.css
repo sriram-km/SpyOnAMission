@@ -1,0 +1,145 @@
+.switches {
+  height: 120px;
+  margin: 20% auto;
+  width: 300px;
+  padding: 2px 1px;
+  /* background: rgb(51,51,51);  */
+  background: url(https://i.ytimg.com/vi/t5_7BQTuK04/maxresdefault.jpg);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+} 
+.switches:before {
+  content:"";
+  position: absolute;
+  left: -25px;
+  top: -35px;
+  width: 100%;
+  height: 100%; 
+  z-index: -10;
+  padding: 35px 25px; 
+  background-image: linear-gradient(top,rgb(233, 226, 223) 1.6%, rgb(31, 140, 145) 94.9%, rgb(116, 145, 177));
+background-image: -webkit-linear-gradient(top,rgb(233, 226, 223) 1.6%, rgb(31, 140, 145) 94.9%, rgb(116, 145, 177));
+background-image: -moz-linear-gradient(top,rgb(233, 226, 223) 1.6%, rgb(31, 140, 145) 94.9%, rgb(116, 145, 177));
+background-image: -o-linear-gradient(top,rgb(233, 226, 223) 1.6%, rgb(31, 140, 145) 94.9%, rgb(116, 145, 177));
+  box-shadow: 0 1px 3px 5px rgba(0,0,0,.5),
+      inset 0 1px 0 white;
+    border-radius: 2px;
+}
+body{
+	/* background: rgb(2, 49, 37); 1*/
+  background: url(https://i.ytimg.com/vi/t5_7BQTuK04/maxresdefault.jpg);
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+	border:0px;
+  height: 100%;
+  width: 100%;
+}
+.switch { 
+  /* float: left;  */
+  width: 48%; 
+  margin: 0 1%; 
+  height: 100%; 
+  background-image: linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  background-image: -webkit-linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  background-image: -moz-linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  background-image: -o-linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  box-shadow: 
+    inset 0 10px rgba(255,255,255,.7),
+    inset 0 11px 1px rgba(250,250,250,.2),
+    inset 0 -2px 1px rgba(0,0,0,.2);
+  border-radius: 2px; 
+  position: relative;
+  z-index: 10;
+}
+.switches:after { 
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  z-index: -12; 
+  left: -2%;
+  width: 104%;
+  box-shadow:
+    0 1px 4px 12px rgba(0,0,0,.8);
+}
+.switch:before {
+  content: "";
+  background: rgb(53, 244, 252); /*2*/
+  /* background: url(https://i.ytimg.com/vi/t5_7BQTuK04/maxresdefault.jpg); */
+  width: 36%;
+  position: absolute;
+  height: 4px;
+  margin-top: 0%;
+  top: 77%;
+  margin-left: 32% ;
+  margin-right: 32% ;
+  margin-bottom: 0px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 1px rgba(0,0,0,.2);
+  border: 1px solid rgba(0,0,0,.1);
+}
+.switch:after{
+  content:"";
+  position:absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom,  rgba(65,50,0,0.25) 0%,rgba(65,50,0,0.25) 1%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+background: -webkit-linear-gradient(top,  rgba(65,50,0,0.25) 0%,rgba(65,50,0,0.25) 1%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+background: -o-linear-gradient(top,  rgba(65,50,0,0.25) 0%,rgba(65,50,0,0.25) 1%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+background: -ms-linear-gradient(top,  rgba(65,50,0,0.25) 0%,rgba(65,50,0,0.25) 1%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+  border-radius: 2px;
+}
+.off.switch {
+  background-image: linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  background-image: -webkit-linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));/* Use same color as switch color */
+  background-image: -moz-linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  background-image: -o-linear-gradient(bottom,rgb(233, 226, 223) 1.6%, rgb(162, 153, 148) 94.9%, rgb(180, 166, 159));
+  box-shadow: none;
+  box-shadow: 
+   inset 0 -10px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.off.switch:before {
+ margin: 0% 32% 8%; 
+  top: 70%;
+  /* background: rgba(255, 255, 255, 0.42); 3*/
+  background: url(https://i.ytimg.com/vi/t5_7BQTuK04/maxresdefault.jpg);
+}
+.off.switch:after{
+  content:"";
+  position:absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom,  rgba(65,50,0,0.3) 0%,rgba(65,50,0,0.3) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+  background: -moz-linear-gradient(top,  rgba(65,50,0,0.3) 0%, rgba(65,50,0,0.3) 35%, rgba(65,50,0,0) 68%, rgba(65,50,0,0) 100%);/* Use same color of shadow earlier */
+background: -webkit-linear-gradient(top,  rgba(65,50,0,0.3) 0%,rgba(65,50,0,0.3) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+background: -o-linear-gradient(top,  rgba(65,50,0,0.3) 0%,rgba(65,50,0,0.3) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+background: -ms-linear-gradient(top,  rgba(65,50,0,0.3) 0%,rgba(65,50,0,0.3) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%);
+  border-radius: 2px;
+}
+.light { 
+  /* background:rgb(18, 78, 61); */
+  background: url(https://i.ytimg.com/vi/t5_7BQTuK04/maxresdefault.jpg);
+}
+.radial:before{
+  content:"";
+  position:absolute;
+  top:-30%;
+  width:200%;
+  height: 100%;
+  background: radial-gradient(ellipse at center,  rgba(255,255,255,0.15) 1%,rgba(255,255,255,0.15) 2%,rgba(255,255,255,0) 56%,rgba(255,255,255,0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 1%,rgba(255,255,255,0.65) 2%,rgba(255,255,255,0.15) 56%,rgba(255,255,255,0.05	) 60%,rgba(255,255,255,0.04) 70%,rgba(255,255,255,0.04) 80%,rgba(255,255,255,0) 100%);
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 1%,rgba(255,255,255,0.65) 2%,rgba(255,255,255,0.15) 56%,rgba(255,255,255,0.05	) 60%,rgba(255,255,255,0.04) 70%,rgba(255,255,255,0.04) 80%,rgba(255,255,255,0) 100%);
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 1%,rgba(255,255,255,0.65) 2%,rgba(255,255,255,0.15) 56%,rgba(255,255,255,0.05	) 60%,rgba(255,255,255,0.04) 70%,rgba(255,255,255,0.04) 80%,rgba(255,255,255,0) 100%);
+  z-index: -21;
+}

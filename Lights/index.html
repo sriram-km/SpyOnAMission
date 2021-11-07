@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="https://images.pngnice.com/download/2007/Agent-PNG-Transparent-Image.png">
+    <title>Spy On A Misson</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+    /* Position text in the middle of the page/image */
+    #bg-text {
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 12;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #count-down {
+      style="font-size:50px";
+    }
+
+    .invalid {
+      border-color: red;
+    }
+
+    .error {
+      color: red
+    }
+
+    .green {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bg-text">
+    <h1 id="count-down"></h1>
+  </div>
+  <div class="switches">
+    <div class="switch off">
+    </div>
+    <div class="switch off">
+    </div>
+    <div class="switch off">
+    </div>
+    <div class="switch off">
+    </div>
+    <div class="switch off">
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
