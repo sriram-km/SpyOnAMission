@@ -4,8 +4,11 @@ myAudio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
-myAudio.play(); 
 });
+
+document.body.addEventListener("mousemove", function () {
+    myAudio.play(); 
+})
 
 let start = document.querySelector('#brand');
 let ex = 10;
