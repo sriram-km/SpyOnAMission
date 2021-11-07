@@ -4,11 +4,9 @@ let commands = ["Hi, Agent B. I knew you’d come and I’m glad you’re here. 
 const synth = window.speechSynthesis;
 let index = 0;
 
-// $(document).ready(function() {
-//     let searchParams = new URLSearchParams(window.location.search);
-//     var dialogue = commands[searchParams.get('level')];
-//     index = 0;
-// });
+$(document).ready(function() {
+    $("#nextButton").click();
+});
 
 $("#nextButton").click(function(){
   const utter = new SpeechSynthesisUtterance(commands[index]);
