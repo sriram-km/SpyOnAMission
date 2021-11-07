@@ -1,11 +1,11 @@
-document.body.addEventListener("mousemove", function () {
+$('document').ready(function() {
    var myAudio = new Audio('Dark _Atmosphere13_Looped_24bit.wav'); 
-    myAudio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-    myAudio.play();
-})
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+myAudio.play(); 
+});
 
 let start = document.querySelector('#brand');
 let ex = 10;
@@ -69,9 +69,5 @@ $('div#centerDiv').css("display", "block").animate({
 
 $( "#brand img" ).click(function() {
   turnOff();
-  setTimeout(
-  function() 
-  {
-    window.location.replace("/intro/");
-  }, 700);
+  window.location.replace("/intro/");
 });
