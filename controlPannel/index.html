@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Card Crypt</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<style>
+		/* Position text in the middle of the page/image */
+		#bg-text {
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.4);
+			/* Black w/opacity/see-through */
+			color: white;
+			font-weight: bold;
+			border: 3px solid #f1f1f1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+			width: 80%;
+			padding: 20px;
+			text-align: center;
+		}
+
+    #count-down {
+      font-size:50px;
+    }
+
+		.invalid {
+			border-color: red;
+		}
+
+		.error {
+			color: red
+		}
+
+    .green {
+      color: red;
+    }
+	</style>
+</head>
+
+<body>
+  <audio src="./start.mp3" id="start-audio"></audio>
+  <audio src="./buzzer2.mp3" id="buzzer-audio"></audio>
+  <audio src="./buzzer.mp3" id="buzzer-audio1"></audio>
+  <audio src="./defeat.mp3" id="defeat-audio"></audio>
+	<audio src="./victory.mp3" id="victory-audio" preload="auto"></audio>
+	<div id="bg-text">
+		<h1 id="count-down"></h1>
+	</div>
+	<div class="decrypt">
+		<div class="top">
+			<section class="panel panel--up">
+				<ul class="indicators indicators--left">
+					<li id="li-1" class="indicator"></li>
+					<li id="li-2" class="indicator"></li>
+					<li id="li-3" class="indicator"></li>
+					<li id="li-4" class="indicator"></li>
+					<li id="li-5" class="indicator"></li>
+				</ul>
+			</section>
+		</div>
+		<div class="game">
+			<section class="panel panel--left">
+				<div id="inside-panel--left" class="inside-panel">
+					<div class="buttons buttons--left">
+						<button id="bl-1" class="button"></button>
+            <button id="bl-2" class="button"></button>
+            <button id="bl-3" class="button"></button>
+            <button id="bl-4" class="button"></button>
+            <button id="bl-5" class="button"></button>
+            <button id="bl-6" class="button"></button>
+            <button id="bl-7" class="button"></button>
+            <button id="bl-8" class="button"></button>
+            <button id="bl-9" class="button"></button>
+          </div>
+        </div>
+      </section>
+      <section class="panel panel--right">
+        <div id="inside-panel--right" class="inside-panel">
+          <div class="buttons buttons--right">
+            <button id="br-1" class="button"></button>
+            <button id="br-2" class="button"></button>
+            <button id="br-3" class="button"></button>
+            <button id="br-4" class="button"></button>
+            <button id="br-5" class="button"></button>
+            <button id="br-6" class="button"></button>
+            <button id="br-7" class="button"></button>
+            <button id="br-8" class="button"></button>
+            <button id="br-9" class="button"></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+    
+
+    <script>
+      let currTick = 3;
+
+      const inv = setInterval( () => {
+          if(currTick > 0) {
+            document.getElementById("count-down").innerHTML = "Game starts in " + currTick--;
+          }
+          else {
+            clearInterval(inv);
+            document.getElementById("bg-text").style.display = "none";
+            document.querySelector(".decrypt").style.filter = "none";
+            resetGame();
+          }
+      }, 1000);
+    </script>
+    <script>
+      let startAudio = document.querySelector('#start-audio');
+      let buzzerAudio = document.querySelector('#buzzer-audio');
+      let buzzerAudio1 = document.querySelector('#buzzer-audio1');
+      
+      // document.querySelector('.top').addEventListener('click', ()=>{
+      //   startAudio.play(); // start
+      // });
+
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

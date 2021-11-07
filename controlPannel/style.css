@@ -1,0 +1,152 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://t4.ftcdn.net/jpg/02/45/15/23/360_F_245152315_SIq2yqxHcmev07CHMwWXeUHAgrkTWT8p.jpg");
+}
+
+.decrypt {
+  height: 100vh;
+  width: 100%;
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+li {
+	list-style: none;
+}
+
+.game {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 90vh;
+	/* background-color: rgba(1, 7, 92, 1.0); */
+}
+
+.panel {
+	width: 550px;
+	height: 600px;
+	background-color: #b4bdd1;
+	border: 8px solid #1b1b1b;
+	border-radius: 5px;
+}
+
+.panel--left {
+	margin-right: 1rem;
+}
+
+.panel .inside-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+  background-color: #9ba1b0;
+	border-top: 50px solid #b4bdd1;
+  border-right: 50px solid #4d4e53;
+  border-bottom: 50px solid #65676e;
+  border-left: 50px solid #4d4e53;
+	padding: 50px 30px;
+}
+
+.panel .inside-panel.error .indicators--right .indicator,
+.panel .inside-panel.error .buttons--right .button {
+	border-color: #630b0b;
+	background-color: rgba(38, 0, 1, 1.0);
+}
+
+.indicators {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.indicators .indicator {
+	width: 32px;
+	height: 32px;
+	background-color: #65676e;
+	border-radius: 50%;
+	box-shadow: 3px 3px 2px 0px #4d4e53;
+	border: 5px solid #343539;
+}
+
+.indicators .indicator.active {
+	background-color: #029618;
+	border-color: #00630f;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 85%;
+	height: 80%;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+.buttons .button {
+	width: 92px;
+	height: 92px;
+	border-radius: 8px;
+}
+
+.buttons .button:focus {
+	outline: none;
+}
+
+.buttons--left {
+	background-color: #1b1b1b;
+	border: 4px solid rgba(255, 255, 255, 0.85);
+}
+
+.buttons--left .button {
+	background-color: #1b1b1b;
+	border: none;
+}
+
+.buttons--left .button.active {
+	/* background-color: rgba(1, 7, 92, 1.0); */
+  background-color: rgb(6, 114, 6, 0.7);
+}
+
+.buttons--right .button {
+	background-color: #65676e;
+	border: 6px solid #343539;
+	box-shadow: 5px 5px 5px 0px #656d80;
+}
+
+.buttons--right .button.active {
+  background-color: rgba(4, 67, 5, 1.0);
+	border-color: #00630f;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 10vh;
+	/* background-color: rgba(1, 7, 92, 1.0); */
+}
+
+.top .panel {
+	width: 550px;
+	height: 50px;
+	background-color: #b4bdd1;
+	border: 8px solid #1b1b1b;
+	border-radius: 5px;
+}
