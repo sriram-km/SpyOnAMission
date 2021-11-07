@@ -69,5 +69,5 @@ $('div#centerDiv').css("display", "block").animate({
 
 $( "#brand img" ).click(function() {
   turnOff();
-  window.location.replace("https://agent-hacker.sriram23.repl.co/TextToSpeech/");
+  window.location.replace("/TextToSpeech/");
 });
