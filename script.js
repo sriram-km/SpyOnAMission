@@ -1,13 +1,10 @@
-$('document').ready(function() {
-   var myAudio = new Audio('Dark _Atmosphere13_Looped_24bit.wav'); 
-myAudio.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-});
-
 document.body.addEventListener("mousemove", function () {
-    myAudio.play(); 
+   var myAudio = new Audio('Dark _Atmosphere13_Looped_24bit.wav'); 
+    myAudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    myAudio.play();
 })
 
 let start = document.querySelector('#brand');
