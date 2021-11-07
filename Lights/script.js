@@ -1,5 +1,6 @@
 let bgText = document.getElementById("bg-text");
 let switches = document.querySelector(".switches");
+const switchSound = new Audio('https://www.soundjay.com/switch/sounds/switch-5.mp3');
 
 let s = document.querySelectorAll(".switch");
 let limit = 5;
@@ -87,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $(".switch").bind("click", function () { // Get all Switches and Bind click function
     $(this).toggleClass("off");//Toggle on and off of lights on button
+    switchSound.play();
     if (currentPositon[$(this).index()] == 1) {
       currentPositon[$(this).index()] = 0;
     }
