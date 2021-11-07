@@ -14,6 +14,8 @@ $("#nextButton").click(function(){
 
   utter.lang = 'en-US';
   utter.voice = voices[3];
+  utter.pitch = 0.7;
+  utter.rate = 1.1;
   $("#box>p").text(commands[index]);
   synth.cancel();
   synth.speak(utter);
