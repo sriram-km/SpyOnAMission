@@ -1,10 +1,12 @@
-$('document').ready(function() {
-   var myAudio = new Audio('Dark _Atmosphere13_Looped_24bit.wav'); 
+$("body").hover(function(){
+    var myAudio = new Audio('Dark _Atmosphere13_Looped_24bit.wav'); 
 myAudio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
-myAudio.play(); 
+myAudio.play();
+
+  $("body").off('mouseenter mouseleave');
 });
 
 let start = document.querySelector('#brand');
