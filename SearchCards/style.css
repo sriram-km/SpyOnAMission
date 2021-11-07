@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#CardsNeededToBePicked{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:10 ;
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  cursor: default;
+}
+
+.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x) var(--y),
+     #ffeeaa30 6%, rgba(0,0,0,.985) 10%);
+}
+
+body{
+  height: 100%;
+  background-position: center;
+  background-repeat:repeat;
+  background-size: cover;
+  background-image: url(" https://i.pinimg.com/originals/a1/85/0b/a1850bfc8e85c42162086de56213f371.jpg");
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+section > div{
+  position: absolute;
+}
+
+section > div > img{
+  width: 100px;
+  position: relative;
+}
+
+.card {
+  cursor: default;
+  background-color: #dfdfdf;
+  border: 2px solid #7f7f7f;
+  border-radius: 7.5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  margin-top: -37.5px;
+  width: 125px;
+  height: 75px;
+  transform: translateX(-62.5px);
+}
+
+.photo {
+  position: relative;
+  width: 37.5px;
+  height: 50px;
+  background-color: #aeaeae;
+  border: 2px solid #292929;
+  margin-left: 8px;
+  overflow: hidden;
+  pointer-events: none;
+    display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#photo > img{
+  width: 37.5px;
+  margin-top: 10px;
+}
+
+
+.photoId{
+  position: relative;
+  width: 50px;
+  height: 20px;
+  background-color: #aeaeae;
+  border: 2px solid #292929;
+  margin-left: 8px;
+  margin-top: 25px;
+  text-align: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.photoId>h1{
+  font-size:10px;
+  position: relative;
+  pointer-events: none;
+}
