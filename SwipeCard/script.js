@@ -151,6 +151,7 @@ function setStatus(status) {
     document.removeEventListener('touchstart', dragStart);
     document.removeEventListener('touchend', dragEnd);
     document.removeEventListener('touchmove', drag);
+    window.location.replace("/");
   }
   reader.dataset.status = status;
   playAudio(status);
@@ -165,6 +166,7 @@ function playAudio(status) {
 
   if (status === 'valid') {
     soundAccepted.play();
+    window.location.replace("/controlPannel");
   } else {
     soundDenied.play();
   }
